@@ -1,12 +1,19 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import Icon from "./Icon";
 
-const MenuItem = ({name}) => {
+const MenuItem = props => {
   return (
-      <li class="nav-item">
-        <a class="nav-link active" href="#">
-          {name} <span class="sr-only">(current)</span>
-        </a>
-      </li>
+    <li className="nav-item">
+      <NavLink
+        className="nav-link"
+        activeClassName="active"
+        to={props.url}
+        exact
+      >
+        <Icon size={props.size} icon={props.icon} /> {props.label}
+      </NavLink>
+    </li>
   );
 };
 
