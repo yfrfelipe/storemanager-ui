@@ -4,8 +4,23 @@ import "./index.css";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
 
-ReactDOM.render(<App />, document.getElementById("app"));
+import { Provider } from "react-redux";
+import { createStore, compose, applyMiddleware } from "redux";
+import createSagaMiddleware from "redux-saga";
+import reducer from "./reducers";
+import sagas from "./sagas";
+
+const sagaMiddleware = createSagaMiddleware();
+
+const store = createStore(reducer, compose(applyMiddleware(sagaMiddleware)));
+
+sagaMiddleware.run(sagas);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("app")
+);
 registerServiceWorker();
