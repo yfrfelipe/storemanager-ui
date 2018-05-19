@@ -37,13 +37,15 @@ const stocks = [
 
 const Stock = props => {
   return (
+    <div>
+      <h2>Estoque</h2>
     <DataTable>
       <THead theme="thead-dark">
-        <Th name="Code" />
-        <Th name="Name" />
-        <Th name="Buy Price" />
-        <Th name="Sell Price" />
-        <Th name="Quantity" />
+        <Th name="Codigo" />
+        <Th name="Nome" />
+        <Th name="Preço de compra" />
+        <Th name="Preço de venda" />
+        <Th name="Quantidade" />
       </THead>
       <TBody>
         {stocks.length > 0 && stocks.map(item => (
@@ -57,6 +59,7 @@ const Stock = props => {
         ))}
       </TBody>
     </DataTable>
+    </div>
   );
 };
 

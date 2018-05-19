@@ -54,27 +54,30 @@ const providers = [
 
 const Provider = props => {
   return (
-    <DataTable>
-      <THead>
-        <Th name="Name" />
-        <Th name="Cnpj" />
-        <Th name="Email" />
-        <Th name="City" />
-        <Th name="State" />
-      </THead>
-      <TBody>
-        {providers.length > 0 &&
-          providers.map(item => (
-            <tr key={item.name}>
-              <Td name={item.name} />
-              <Td name={item.cnpj} />
-              <Td name={item.contact.email} />
-              <Td name={item.address.cityDTO.name} />
-              <Td name={item.address.cityDTO.stateDTO.name} />
-            </tr>
-          ))}
-      </TBody>
-    </DataTable>
+    <div>
+      <h2>Fornecedores</h2>
+      <DataTable>
+        <THead>
+          <Th name="Nome" />
+          <Th name="Cnpj" />
+          <Th name="Email" />
+          <Th name="Cidade" />
+          <Th name="Estado" />
+        </THead>
+        <TBody>
+          {providers.length > 0 &&
+            providers.map(item => (
+              <tr key={item.name}>
+                <Td name={item.name} />
+                <Td name={item.cnpj} />
+                <Td name={item.contact.email} />
+                <Td name={item.address.cityDTO.name} />
+                <Td name={item.address.cityDTO.stateDTO.name} />
+              </tr>
+            ))}
+        </TBody>
+      </DataTable>
+    </div>
   );
 };
 

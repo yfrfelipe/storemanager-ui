@@ -3,14 +3,14 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import "./App.css";
 
-import NavBar from "./components/NavBar";
-import SideBarMenu from "./components/SideBarMenu";
-import MenuItem from "./components/MenuItem";
-import Card from "./components/Card";
+import Card from "./components/Cards";
 import DashBoard from "./scenes/dashboard";
 import Provider from "./scenes/provider";
 import Customer from "./scenes/customer";
 import Stock from "./scenes/stock";
+import SideBar from "./components/SideBar";
+import MenuLink from "./components/MenuLink";
+import NavBar from "./components/NavBar";
 
 class App extends Component {
   render() {
@@ -20,12 +20,12 @@ class App extends Component {
           <NavBar />
           <div className="container-fluid">
             <div className="row">
-              <SideBarMenu>
-                <MenuItem size={20} icon="home" label="Dashboard" url="/dashboard"/>
-                <MenuItem size={20} icon="truck" label="Fornecedor" url="/provider"/>
-                <MenuItem size={20} icon="box" label="Estoque" url="/stock" />
-                <MenuItem size={20} icon="box" label="Clientes" url="/customer"/>
-              </SideBarMenu>
+              <SideBar>
+                <MenuLink size={20} icon="home" label="Dashboard" url="/dashboard"/>
+                <MenuLink size={20} icon="truck" label="Fornecedor" url="/provider"/>
+                <MenuLink size={20} icon="box" label="Estoque" url="/stock" />
+                <MenuLink size={20} icon="box" label="Clientes" url="/customer"/>
+              </SideBar>
               <main role="main"  className="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
                 <Route path="/dashboard" component={DashBoard} />
                 <Route path="/customer" component={Customer} />

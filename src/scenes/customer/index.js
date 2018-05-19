@@ -52,13 +52,15 @@ const customers = [
 ];
 const Customer = () => {
   return (
+    <div>
+      <h2>Clientes</h2>
       <DataTable>
         <THead>
-          <Th name="Name" />
+          <Th name="Nome" />
           <Th name="Cpf" />
-          <Th name="email" />
-          <Th name="City" />
-          <Th name="State" />
+          <Th name="Email" />
+          <Th name="Cidade" />
+          <Th name="Estado" />
         </THead>
         <TBody>
           {customers.length > 0 &&
@@ -73,6 +75,7 @@ const Customer = () => {
             ))}
         </TBody>
       </DataTable>
+    </div>
   );
 };
 
