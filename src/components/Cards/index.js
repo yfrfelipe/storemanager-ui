@@ -3,7 +3,7 @@ import React from "react";
 const Card = (props) => {
   return (
     <div className="col-12 col-lg-12 col-xl-4" >
-      <section className="card card-fluid card-1">
+      <section className="card card-fluid">
         <div className="card-body">
           <div className="d-flex align-items-center mb-3">
             <h3 className="card-title mr-auto">{props.title}</h3>

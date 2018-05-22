@@ -13,20 +13,25 @@ import MenuLink from "./components/MenuLink";
 import NavBar from "./components/NavBar";
 
 class App extends Component {
+
+  componentWillMount(){
+    document.getElementById('body').className='color'
+  }
+  
   render() {
     return (
       <Router>
-        <div className="App">
+        <div >
           <NavBar />
           <div className="container-fluid">
             <div className="row">
               <SideBar>
-                <MenuLink size={20} icon="home" label="Dashboard" url="/dashboard"/>
-                <MenuLink size={20} icon="truck" label="Fornecedor" url="/provider"/>
+                <MenuLink size={20} icon="home" label="Dashboard" url="/dashboard" />
+                <MenuLink size={20} icon="truck" label="Fornecedor" url="/provider" />
                 <MenuLink size={20} icon="box" label="Estoque" url="/stock" />
-                <MenuLink size={20} icon="box" label="Clientes" url="/customer"/>
+                <MenuLink size={20} icon="box" label="Clientes" url="/customer" />
               </SideBar>
-              <main role="main"  className="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+              <main role="main" className="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
                 <Route path="/dashboard" component={DashBoard} />
                 <Route path="/customer" component={Customer} />
                 <Route path="/provider" component={Provider} />

@@ -5,6 +5,7 @@ import THead from "../../components/DataTable/THead";
 import TBody from "../../components/DataTable/TBody";
 import Td from "../../components/DataTable/Td";
 import Th from "../../components/DataTable/Th";
+import CardHeader from "../../components/CardHeader";
 
 const stocks = [
   {
@@ -37,29 +38,28 @@ const stocks = [
 
 const Stock = props => {
   return (
-    <div>
-      <h2>Estoque</h2>
-    <DataTable>
-      <THead theme="thead-dark">
-        <Th name="Codigo" />
-        <Th name="Nome" />
-        <Th name="Preço de compra" />
-        <Th name="Preço de venda" />
-        <Th name="Quantidade" />
-      </THead>
-      <TBody>
-        {stocks.length > 0 && stocks.map(item => (
-          <tr key={item.cofp}>
-            <Td name={item.productCode} />
-            <Td name={item.name} />
-            <Td name={item.productDetailsDTO.buyPrice} />
-            <Td name={item.productDetailsDTO.sellPrice} />
-            <Td name={item.productDetailsDTO.quantity} />
-          </tr>
-        ))}
-      </TBody>
-    </DataTable>
-    </div>
+    <CardHeader title="Estoque">
+      <DataTable>
+        <THead theme="thead-dark">
+          <Th name="Codigo" />
+          <Th name="Nome" />
+          <Th name="Preço de compra" />
+          <Th name="Preço de venda" />
+          <Th name="Quantidade" />
+        </THead>
+        <TBody>
+          {stocks.length > 0 && stocks.map(item => (
+            <tr key={item.cofp}>
+              <Td name={item.productCode} />
+              <Td name={item.name} />
+              <Td name={item.productDetailsDTO.buyPrice} />
+              <Td name={item.productDetailsDTO.sellPrice} />
+              <Td name={item.productDetailsDTO.quantity} />
+            </tr>
+          ))}
+        </TBody>
+      </DataTable>
+    </CardHeader>
   );
 };
 

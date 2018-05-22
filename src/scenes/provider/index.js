@@ -4,6 +4,7 @@ import THead from "../../components/DataTable/THead";
 import TBody from "../../components/DataTable/TBody";
 import Td from "../../components/DataTable/Td";
 import Th from "../../components/DataTable/Th";
+import CardHeader from "../../components/CardHeader";
 
 const providers = [
   {
@@ -54,8 +55,7 @@ const providers = [
 
 const Provider = props => {
   return (
-    <div>
-      <h2>Fornecedores</h2>
+    <CardHeader title="Fornecedores">
       <DataTable>
         <THead>
           <Th name="Nome" />
@@ -77,7 +77,8 @@ const Provider = props => {
             ))}
         </TBody>
       </DataTable>
-    </div>
+    </CardHeader>
+
   );
 };
 

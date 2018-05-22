@@ -5,6 +5,7 @@ import THead from "../../components/DataTable/THead";
 import TBody from "../../components/DataTable/TBody";
 import Td from "../../components/DataTable/Td";
 import Th from "../../components/DataTable/Th";
+import CardHeader from "../../components/CardHeader";
 
 const customers = [
   {
@@ -52,8 +53,8 @@ const customers = [
 ];
 const Customer = () => {
   return (
-    <div>
-      <h2>Clientes</h2>
+
+    <CardHeader title="Clientes">
       <DataTable>
         <THead>
           <Th name="Nome" />
@@ -75,7 +76,7 @@ const Customer = () => {
             ))}
         </TBody>
       </DataTable>
-    </div>
+    </CardHeader>
   );
 };
 

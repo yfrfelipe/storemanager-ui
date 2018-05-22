@@ -11,4 +11,5 @@
 }
 
 .sidebar .nav-link {color:#A9ACC1;}
-.sidebar .nav-link:hover {color: #686F76}    
+.sidebar .nav-link:hover {color:steelblue}    
+.sidebar .nav-link:focus {color:steelblue}    

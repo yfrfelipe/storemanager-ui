@@ -1,5 +1,6 @@
 import React from "react";
 import MenuLink from "../MenuLink";
+import DropDown from "../DropDown";
 
 const NavBar = props => {
   return (
@@ -15,6 +16,7 @@ const NavBar = props => {
         <ul className="nav navbar-nav">
           <MenuLink size={20} icon="bell" url="/dashbdoard" />
           <MenuLink size={20} icon="user" url="/dashboard" />
+          <DropDown />
         </ul>
       </nav>
     </div>

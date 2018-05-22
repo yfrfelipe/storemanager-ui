@@ -2,7 +2,7 @@ import React from "react";
 
 const THead = props => {
   return (
-    <thead className="thead-light">
+    <thead>
       <tr>{props.children}</tr>
     </thead>
   );
