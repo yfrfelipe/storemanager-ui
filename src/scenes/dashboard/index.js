@@ -8,7 +8,7 @@ class DashBoard extends React.Component {
     return (
       <div>
         <div className="row">
-          <button onClick={onRequest}>load </button>
+          {/* <button onClick={onRequest}>load </button> */}
         </div>
         <div className="row">
           <Card title="Fornecedores" quantity="80" />
