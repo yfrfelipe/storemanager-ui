@@ -5,7 +5,8 @@ import TBody from "../../components/DataTable/TBody";
 import Td from "../../components/DataTable/Td";
 import Th from "../../components/DataTable/Th";
 import CardHeader from "../../components/CardHeader";
-
+import Form from "./components/FormField"
+  
 const providers = [
   {
     address: {
@@ -55,6 +56,8 @@ const providers = [
 
 const Provider = props => {
   return (
+    <div>
+    <Form/>
     <CardHeader title="Fornecedores">
       <DataTable>
         <THead>
@@ -78,6 +81,7 @@ const Provider = props => {
         </TBody>
       </DataTable>
     </CardHeader>
+    </div>
 
   );
 };

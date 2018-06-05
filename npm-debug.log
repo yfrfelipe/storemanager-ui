@@ -7,7 +7,7 @@
 6 silly lifecycle dashboard-manager@0.1.0~prestart: no script for prestart, continuing
 7 info lifecycle dashboard-manager@0.1.0~start: dashboard-manager@0.1.0
 8 verbose lifecycle dashboard-manager@0.1.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle dashboard-manager@0.1.0~start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/feliciano/workspace/storemanager-ui/node_modules/.bin:/home/feliciano/bin:/home/feliciano/.local/bin:/home/feliciano/bin:/home/feliciano/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-7-oracle/bin:/usr/lib/jvm/java-7-oracle/db/bin:/usr/lib/jvm/java-7-oracle/jre/bin:/snap/bin:/usr/lib/jvm/java-7-oracle/bin:/usr/lib/jvm/java-7-oracle/db/bin:/usr/lib/jvm/java-7-oracle/jre/bin:/usr/local/bin:/usr/local/bin
+9 verbose lifecycle dashboard-manager@0.1.0~start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/feliciano/workspace/storemanager-ui/node_modules/.bin:/home/feliciano/bin:/home/feliciano/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/feliciano/Android/Sdk/tools:/home/feliciano/Android/Sdk/platform-tools:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/feliciano/Android/Sdk/tools:/home/feliciano/Android/Sdk/platform-tools
 10 verbose lifecycle dashboard-manager@0.1.0~start: CWD: /home/feliciano/workspace/storemanager-ui
 11 silly lifecycle dashboard-manager@0.1.0~start: Args: [ '-c',
 11 silly lifecycle   'webpack-dev-server --progress --hot --mode development' ]
@@ -25,7 +25,7 @@
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:230:5)
 15 verbose pkgid dashboard-manager@0.1.0
 16 verbose cwd /home/feliciano/workspace/storemanager-ui
-17 error Linux 4.4.0-124-generic
+17 error Linux 4.13.0-43-generic
 18 error argv "/usr/bin/node" "/usr/bin/npm" "start"
 19 error node v6.14.2
 20 error npm  v3.10.10

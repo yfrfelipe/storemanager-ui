@@ -9,6 +9,6 @@ export const ApiCustomer = axios.create({
 });
 
 export const ApiProvider = axios.create({
-  baseURL: "localhost:8080"
+  baseURL: "https://providermanager-java.herokuapp.com/"
 });
 

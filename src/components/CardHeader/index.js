@@ -2,8 +2,8 @@ import React from "react";
 
 const CardHeader = props => {
     return (
-        <section class="card">
-            <div class="card-header bg-transparent txt">
+        <section className="card">
+            <div className="card-header bg-transparent txt">
                 {props.title}
             </div>
             {props.children}

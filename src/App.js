@@ -5,7 +5,7 @@ import "./App.css";
 
 import Card from "./components/Cards";
 import DashBoard from "./scenes/dashboard";
-import Provider from "./scenes/provider";
+import Provider from "./scenes/Provider";
 import Customer from "./scenes/customer";
 import Stock from "./scenes/stock";
 import SideBar from "./components/SideBar";
