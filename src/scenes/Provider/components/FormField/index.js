@@ -3,151 +3,183 @@ import { reduxForm, Field, FormSection } from "redux-form";
 import { connect } from "react-redux";
 
 let Form = props => {
-  const { handleSubmit, readOnly, onRequest } = props;
+  const { handleSubmit, readOnly, submitValues } = props;
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <Field
-          name="name"
-          id="name"
-          className="form-control"
-          component="input"
-          type="text"
-        />
-        <Field
-          name="stateEnrolment"
-          id="stateEnrolment"
-          className="form-control"
-          component="input"
-          type="text"
-        />
-        <Field
-          name="cnpj"
-          id="cnpj"
-          className="form-control"
-          component="input"
-          type="text"
-        />
-        <FormSection name="contact">
-          <Field
-            name="email"
-            id="email"
-            className="form-control"
-            component="input"
-            type="text"
-          />
-
-          <Field
-            name="primaryPhone"
-            id="primaryPhone"
-            className="form-control"
-            component="input"
-            type="text"
-          />
-
-          <Field
-            name="secondaryPhone"
-            id="secondaryPhone"
-            className="form-control"
-            component="input"
-            type="text"
-          />
-        </FormSection>
-        <FormSection name="address">
-          <Field
-            name="neighbor"
-            id="neighbor"
-            className="form-control"
-            component="input"
-            type="text"
-          />
-
-          <Field
-            name="number"
-            id="number"
-            className="form-control"
-            component="input"
-            type="text"
-          />
-
-          <Field
-            name="street"
-            id="street"
-            className="form-control"
-            component="input"
-            type="text"
-          />
-          <Field
-            name="cep"
-            id="cep"
-            className="form-control"
-            component="input"
-            type="text"
-          />
-          <FormSection name="cityDTO">
+      <form onSubmit={handleSubmit(submitValues)}>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="name">Nome</label>
             <Field
               name="name"
               id="name"
               className="form-control"
               component="input"
               type="text"
+              placeholder="Nome"
             />
-            <FormSection name="stateDTO">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="stateEnrolment">Inscrição Estadual</label>
+            <Field
+              name="stateEnrolment"
+              id="stateEnrolment"
+              className="form-control"
+              component="input"
+              type="text"
+              placeholder="Inscrição Estadual"
+            />
+          </div>
+          <div class="form-group col-md-3">
+            <label for="stateEnrolment">Cnpj</label>
+            <Field
+              name="cnpj"
+              id="cnpj"
+              className="form-control"
+              component="input"
+              type="text"
+              placeholder="Cnpj"
+            />
+          </div>
+        </div>
+        <FormSection name="contact">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="email">Email</label>
               <Field
-                name="name"
-                id="name"
+                name="email"
+                id="email"
                 className="form-control"
                 component="input"
                 type="text"
+                placeholder="Email"
               />
-            </FormSection>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="primaryPhone">Telefone</label>
+              <Field
+                name="primaryPhone"
+                id="primaryPhone"
+                className="form-control"
+                component="input"
+                type="text"
+                placeholder="Telefone"
+              />
+            </div>
+            <div class="form-group col-md-3">
+              <label for="secondaryPhone">Celular</label>
+              <Field
+                name="secondaryPhone"
+                id="secondaryPhone"
+                className="form-control"
+                component="input"
+                type="text"
+                placeholder="Celular"
+              />
+            </div>
+          </div>
+        </FormSection>
+        <FormSection name="address">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="street">Rua</label>
+              <Field
+                name="street"
+                id="street"
+                className="form-control"
+                component="input"
+                type="text"
+                placeholder="Rua"
+              />
+            </div>
+            <div class="form-group col-md-2">
+              <label for="number">Número</label>
+              <Field
+                name="number"
+                id="number"
+                className="form-control"
+                component="input"
+                type="text"
+                placeholder="Número"
+              />
+            </div>
+            <div class="form-group col-md-3">
+              <label for="neighbor">Bairro</label>
+              <Field
+                name="neighbor"
+                id="neighbor"
+                className="form-control"
+                component="input"
+                type="text"
+                placeholder="Bairro"
+              />
+            </div>
+            <div class="form-group col-md-3">
+              <label for="cep">Cep</label>
+              <Field
+                name="cep"
+                id="cep"
+                className="form-control"
+                component="input"
+                type="text"
+                placeholder="Cep"
+              />
+            </div>
+          </div>
+
+          <FormSection name="cityDTO">
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="name">Cidade</label>
+                <Field
+                  name="name"
+                  id="name"
+                  className="form-control"
+                  component="input"
+                  type="text"
+                  placeholder="Cidade"
+                />
+              </div>
+              <FormSection name="stateDTO">
+                <div class="form-group col-md-2">
+                  <label for="name">Estado</label>
+                  <Field
+                    name="name"
+                    id="name"
+                    className="form-control"
+                    component="input"
+                    type="text"
+                    placeholder="Estado"
+                  />
+                </div>
+              </FormSection>
+            </div>
           </FormSection>
         </FormSection>
-        <button type="submit">salvar</button>{" "}
+        <button type="submit" className="btn btn-primary">
+          Salvar
+        </button>{" "}
       </form>
     </div>
   );
 };
 
-Form = reduxForm({ form: "formProvider", destroyOnUnmount: false })(Form);
-
-const mapStateToProps = state => {
-  return {
-    localidades: state.localidade.item
-  };
-};
+Form = reduxForm({
+  form: "providerForm",
+  initialValues: {},
+  destroyOnUnmount: false
+})(Form);
 
 const mapDispatchToProps = dispatch => {
   return {
-    onRequest: () => dispatch({ type: "API_CALL_REQUEST" })
+    submitValues: values =>
+      dispatch({ type: "SUBMIT_PROVIDER", payload: values })
   };
 };
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(Form);
 
-// {
-//     address: {
-//       cep: "60843-000",
-//       cityDTO: {
-//         name: "Fortaleza",
-//         stateDTO: {
-//           name: "Ce"
-//         }
-//       },
-//       neighbor: "Guajiru",
-//       number: "190",
-//       street: "Rua socorro gomes"
-//     },
-//     cnpj: "09990456233/0001-09",
-//     contact: {
-//       email: "yservice@gmail.com",
-//       primaryPhone: "889999999",
-//       secondaryPhone: "859999999"
-//     },
-//     name: "Felipe Alves",
-//     stateEnrolment: "n sei"
-//   },
