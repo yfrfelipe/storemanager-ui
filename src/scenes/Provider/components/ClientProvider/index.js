@@ -3,7 +3,7 @@ import { Field, FormSection } from "redux-form";
 import renderField from "../../../components/RenderField";
 
 const ClientProvider = () => (
-    <div class="form-row">
+    <div className="form-row">
         <Field
             id="name"
             name="name"
@@ -19,6 +19,7 @@ const ClientProvider = () => (
             component={renderField}
             type="text"
             label="Inscrição Estadual"
+            col="3"
         />
         <Field
             id="cnpj"

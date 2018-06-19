@@ -4,7 +4,7 @@ import renderField from "../RenderField";
 
 const City = props => (
     <FormSection name="cityDTO">
-        <div class="form-row">
+        <div className="form-row">
             <Field
                 id="name"
                 name="name"

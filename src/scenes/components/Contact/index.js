@@ -4,7 +4,7 @@ import renderField from "../RenderField";
 
 const Contact = () => (
     <FormSection name="contact">
-        <div class="form-row">
+        <div className="form-row">
             <Field
                 id="email"
                 name="email"
