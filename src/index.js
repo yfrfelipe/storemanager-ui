@@ -17,7 +17,7 @@ const reduxDevTools =
 
 const sagaMiddleware = createSagaMiddleware();
 
-const store = createStore(reducer, compose(applyMiddleware(sagaMiddleware),reduxDevTools));
+const store = createStore(reducer, compose(applyMiddleware(sagaMiddleware)));
 
 sagaMiddleware.run(sagas);
 
