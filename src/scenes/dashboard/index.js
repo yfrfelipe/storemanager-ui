@@ -1,10 +1,9 @@
 import React from "react";
 import Card from "../../components/Cards";
-import { connect } from "react-redux";
 
 class DashBoard extends React.Component {
   render() {
-    const { onRequest } = this.props;
+   // const { onRequest } = this.props;
     return (
       <div>
         <div className="row">
@@ -20,16 +19,16 @@ class DashBoard extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    localidades: state.localidade.item
-  };
-};
+// const mapStateToProps = state => {
+//   return {
+//     localidades: state.localidade.item
+//   };
+// };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onRequest: () => dispatch({ type: "API_CALL_REQUEST" })
-  };
-};
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     onRequest: () => dispatch({ type: "API_CALL_REQUEST" })
+//   };
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(DashBoard);
+export default DashBoard;
