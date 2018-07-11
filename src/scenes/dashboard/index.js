@@ -1,19 +1,31 @@
 import React from "react";
 import Card from "../../components/Cards";
+import Tabs from "../../components/Tabs";
+import { Tab } from "../../components/Tab";
 
 class DashBoard extends React.Component {
   render() {
-   // const { onRequest } = this.props;
+    // const { onRequest } = this.props;
     return (
       <div>
-        <div className="row">
+        
+        <Tabs>
+          <Tab iconClassName={"fa fa-headphones"} linkClassName={"custom-link"}>
+            <p>hello</p>
+          </Tab>
+          <Tab iconClassName={"fa fa-headphones"} linkClassName={"custom-link"}>
+            <p>from</p>
+          </Tab>
+        </Tabs>
           {/* <button onClick={onRequest}>load </button> */}
-        </div>
+      
         <div className="row">
           <Card title="Fornecedores" quantity="80" />
           <Card title="Clientes" quantity="200" />
           <Card title="Estoques" quantity="500" />
         </div>
+
+       
       </div>
     );
   }

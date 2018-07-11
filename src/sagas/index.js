@@ -1,5 +1,5 @@
-import { put, takeLatest, call } from "redux-saga/effects";
-import { getCustomer, saveProvider, saveCustomer } from "../sagas/apiSagas";
+import { put, takeLatest,takeEvery, call } from "redux-saga/effects";
+import Api, { getCustomer, saveProvider, saveCustomer } from "../sagas/apiSagas";
 import { startSubmit, stopSubmit, reset, initialize } from "redux-form";
 
 function* callLocation() {
@@ -36,11 +36,10 @@ function* submitProvider(action) {
 function* submitCustomer(action) {
   yield put(startSubmit("customerForm"));
   try {
-    console.log(action);
-    yield call(saveCustomer, action.payload);
+    yield call(Api.fetchPost,"/customer", action.payload);
     yield put(stopSubmit("customerForm"));
     yield put(reset("customerForm"));
-    console.log("customerForm", action.payload);
+    console.log(action);
   } catch (e) {
     console.log(e);
     yield put(stopSubmit("customerForm", e.response.data));
@@ -50,8 +49,8 @@ function* submitCustomer(action) {
 export default function* rootSaga() {
   console.log("Hello Sagas!");
   yield [
-    takeLatest("API_CALL_REQUEST", callLocation),
-    takeLatest("SUBMIT_PROVIDER", submitProvider),
-    takeLatest("SUBMIT_CUSTOMER", submitCustomer)
+   // takeLatest("API_CALL_REQUEST", callLocation),
+    //takeLatest("SUBMIT_PROVIDER", submitProvider),
+   takeLatest("SUBMIT_CUSTOMER", submitCustomer)
   ];
 }
