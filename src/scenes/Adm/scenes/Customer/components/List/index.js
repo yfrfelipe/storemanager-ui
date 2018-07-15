@@ -1,4 +1,4 @@
-<DataTable>
+{/* <DataTable>
 <THead>
   <Th name="Nome" />
   <Th name="Cpf" />
@@ -18,4 +18,4 @@
       </tr>
     ))}
 </TBody>
-</DataTable>
+</DataTable> */}

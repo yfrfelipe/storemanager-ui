@@ -1,11 +1,11 @@
 import React from "react";
 
-import DataTable from "../../components/DataTable";
-import THead from "../../components/DataTable/THead";
-import TBody from "../../components/DataTable/TBody";
-import Td from "../../components/DataTable/Td";
-import Th from "../../components/DataTable/Th";
-import CardHeader from "../../components/CardHeader";
+import DataTable from "../../../../components/DataTable";
+import THead from "../../../../components/DataTable/THead";
+import TBody from "../../../../components/DataTable/TBody";
+import Td from "../../../../components/DataTable/Td";
+import Th from "../../../../components/DataTable/Th";
+import CardHeader from "../../../../components/CardHeader";
 
 const stocks = [
   {

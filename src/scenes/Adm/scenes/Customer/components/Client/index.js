@@ -1,5 +1,5 @@
 import React from "react"
-import { Field, FormSection } from "redux-form";
+import { Field } from "redux-form";
 import renderField from "../../../components/RenderField";
 
 const Client = () => (

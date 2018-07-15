@@ -1,14 +1,15 @@
 import axios from "axios";
 
-export const ApiStock = axios.create({
-  baseURL: "http://79.143.185.162:8080/sescquiz/"
-});
+const options = {
+  headers: { "Content-Type": "application/json" }
+};
 
-export const ApiCustomer = axios.create({
-  baseURL: "https://customermanager-java.herokuapp.com/"
-});
+export default class Api {
+  static post(url, values) {
+    return axios.post(url, values, options);
+  }
 
-export const ApiProvider = axios.create({
-  baseURL: "https://providermanager-java.herokuapp.com/"
-});
-
+  static get(service, url) {
+    return axios.get(url);
+  }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import MenuLink from "../MenuLink";
 import DropDown from "../DropDown";
+import PropTypes from "prop-types";
 
 const NavBar = props => {
   return (
@@ -22,5 +23,6 @@ const NavBar = props => {
     </div>
   );
 };
+
 
 export default NavBar;

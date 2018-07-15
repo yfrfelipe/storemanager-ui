@@ -1,18 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import "./App.css";
 
-import Card from "./components/Cards";
-import DashBoard from "./scenes/dashboard";
-import Provider from "./scenes/Provider";
-import Customer from "./scenes/Customer";
-import Stock from "./scenes/stock";
+import DashBoard from "./scenes/Adm/scenes/Dashboard";
+import Provider from "./scenes/Adm/scenes/Provider";
+import Customer from "./scenes/Adm/scenes/Customer";
+import Stock from "./scenes/Adm/scenes/Stock";
 import SideBar from "./components/SideBar";
 import MenuLink from "./components/MenuLink";
 import NavBar from "./components/NavBar";
 
-class App extends Component {
+class App extends React.Component {
 
   componentWillMount(){
     document.getElementById('body').className='color'
